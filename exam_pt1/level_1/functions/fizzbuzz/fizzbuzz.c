@@ -4,20 +4,28 @@ print "buzz", if both, prints "fizzbuzz"*/
 
 #include <unistd.h>
 
-void	ft_write_number(int number)
-{
-	char str[10] = "0123456789";
+// void	ft_putnum(int number)
+// {
+// 	char str[10] = "0123456789";
 
-	if (number > 9)
-		ft_write_number(number / 10);
-	write(1, &str[number % 10], 1);
+// 	if (number > 9)
+// 		ft_write_number(number / 10);
+// 	write(1, &str[number % 10], 1);
+// }
+
+void	ft_putnum(int n)
+{
+	if (n >= 10)
+		ft_putnum(n / 10);
+	char c = (n % 10) + '0';
+	write(1, &c, 1);
 }
 
 int	main()
 {
 	int i = 1;
 
-	while(i <=100)
+	while(i <=105)
 	{
 		if (i % 15 == 0)
 			write(1, "fizzbuzz", 8);
@@ -26,8 +34,9 @@ int	main()
 		else if (i % 5 == 0)
 			write (1, "buzz", 4);
 		else
-			ft_write_number(i);
+			ft_putnum(i);
 		i++;
 		write (1, "\n", 1);
 	}
+	write(1, "\n", 1);
 }
