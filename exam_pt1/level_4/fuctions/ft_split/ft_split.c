@@ -1,4 +1,4 @@
-#include <stdlib.h>	// for write funtion and malloc
+#include <stdlib.h>	// for malloc
 #include <stdio.h> // for NULL
 
 //copies specified number of chars from one str to another
