@@ -52,13 +52,11 @@ int	main(int ac, char **av)
 	if(ac == 2)
 	{
 		printf("%s\n", split[0]);
-		while(split[i + 1] != NULL)
+		while(split[i] != NULL)
 		{
 			printf("%s\n", split[i]);
 			i++;
 		}
-		printf("%s", split[i]);
 	}
-	printf("\n");
 	return 0;
 }
