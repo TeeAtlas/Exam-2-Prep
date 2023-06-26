@@ -21,7 +21,7 @@ int	main(int ac, char **av)
 			}
 			else
 				write(1, &av[1][i], 1);
-			i++;
+		i++;
 		}
 	}
 	write(1, "\n", 1);

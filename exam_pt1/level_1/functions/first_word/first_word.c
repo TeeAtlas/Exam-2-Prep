@@ -9,7 +9,7 @@ int main (int argc, char **argv)
 {
 	int i = 0;
 	
-	if (argc == 2) if // check for one arg in command line
+	if (argc == 2) // check for one arg in command line
 	{
 		while (argv[1][i] == 32 || argv[1][i] == 9) // skip leading spaces or tabs 9 is ht horizontal tab
 			i++;
